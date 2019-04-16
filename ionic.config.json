@@ -1,6 +1,5 @@
 {
   "name": "ionic-ng-wp-client",
-  "app_id": "",
-  "type": "angular",
-  "integrations": {}
+  "integrations": {},
+  "type": "angular"
 }

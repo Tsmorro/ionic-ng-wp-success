@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  endpointURL: 'http://tmorrow.design/wp-json/'
 };
