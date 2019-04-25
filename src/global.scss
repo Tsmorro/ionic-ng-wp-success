@@ -9,3 +9,17 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+#readmore{
+    background: rgb(48,48,48);
+    background: linear-gradient(90deg, rgba(48,48,48,1) 0%, rgba(98,97,97,1) 44%, rgba(179,177,177,1) 100%);
+}
+.card-content-md p {
+    font-size:17px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway; 
+    font-weight: 400;
+    color: black;
+}

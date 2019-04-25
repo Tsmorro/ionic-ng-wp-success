@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  endpointURL: 'http://tmorrow.design/wp-json/'
+  endpointURL: 'http://192.168.1.21/wordpress/public/wp-json/',
+  dateFormat: 'MMM d, y'
 };

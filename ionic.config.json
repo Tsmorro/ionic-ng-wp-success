@@ -1,5 +1,7 @@
 {
   "name": "ionic-ng-wp-client",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

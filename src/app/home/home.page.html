@@ -1,22 +1,75 @@
+
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content padding>
-  <ion-card *ngFor="let item of items">
-    <ion-img *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>{{ item.date | date:dateFormat }}</ion-card-subtitle>
-      <ion-card-title [innerHTML]="item.title.rendered"></ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <div [innerHTML]="item.excerpt.rendered"></div>
-    </ion-card-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        UX Designer and Frontend Developer
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+  <ion-card padding>
+      <ion-header >
+          <ion-card-title>
+            Hi, my name is Tyler Morrow
+          </ion-card-title>
+        </ion-header>
+         <ion-card-content>
+            <p>I’m a User Experience Designer and Front-end Developer in Atlanta, GA. I tend to wear many hats in the digital world, but my true passion is for creating digital experiences that function organically and provide solutions to problems in new and more effective ways. With a background in psychology, my approach to design and development aims to create products that work as intuitively as possible
+         </p>
+
+        <!--  <ion-button class="readmore"  color="primary" size="small">
+            <ion-ripple-effect></ion-ripple-effect>
+          <a id="message" ng-href="" onclick="window.open('mailto:tsmorro@gmail.com')">
+          <ion-icon slot="start" icon="mail"></ion-icon>
+            <ion-label>
+              Message Me
+            </ion-label>
+          </a>
+          </ion-button> -->
+          </ion-card-content>
+      
   </ion-card>
-</ion-content>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-header padding>
+      <h1>
+      Featured Work
+      </h1>
+    </ion-header>
+  </ion-col>
+</ion-row>
+          <ion-row  text-wrap>
+              <ion-col *ngFor="let item of items" size="12" size-md="6">
+      <ion-card padding >
+        <ion-card-title [innerHTML]="item.title.rendered"></ion-card-title>
+        <ion-card-content padding>
+        <a href="/{{item.slug}}"><ion-img *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url" ></ion-img></a>
+        <h3 [innerHTML]="item.excerpt.rendered" text-wrap></h3>
+        <div><ion-button class="readmore" href="/{{item.slug}}" routerDirection="root" color="primary" size="small">
+            <ion-ripple-effect></ion-ripple-effect>
+            Read more
+          </ion-button>
+        </div>
+      </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+      </ion-grid>
+ 
+ 
+
+
+    
+   
+  
+  
+  </ion-content>

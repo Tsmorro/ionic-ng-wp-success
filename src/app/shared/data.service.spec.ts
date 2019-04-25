@@ -1,15 +1,18 @@
-import { TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './data.service';
+
+import {DataService} from './data.service';
 
 describe('DataService', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [
-      HttpClientModule
-    ],
-  }));
-  it('should be created', () => {
-    const service: DataService = TestBed.get(DataService);
-    expect(service).toBeTruthy();
-  });
+
+    let httpClientSpy: { get: jasmine.Spy };
+    let dataService: DataService;
+
+    beforeEach(() => {
+        httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+        dataService = new DataService(<any> httpClientSpy);
+    });
+
+    it('should be created)', () => {
+        expect(dataService).toBeTruthy();
+    });
+
 });
