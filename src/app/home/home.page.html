@@ -54,11 +54,11 @@
         <ion-card-content padding>
         <a href="/{{item.slug}}"><ion-img *ngIf="item._embedded['wp:featuredmedia']" [src]="item._embedded['wp:featuredmedia'][0].source_url" ></ion-img></a>
         <h3 [innerHTML]="item.excerpt.rendered" text-wrap></h3>
-        <div><ion-button class="readmore" href="/{{item.slug}}" routerDirection="root" color="primary" size="small">
+      <!--  // <div><ion-button class="readmore" href="/{{item.slug}}" routerDirection="root" color="primary" size="small">
             <ion-ripple-effect></ion-ripple-effect>
             Read more
           </ion-button>
-        </div>
+        </div>// -->
       </ion-card-content>
         </ion-card>
       </ion-col>
