@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  endpointURL: 'https://tmorrow.dev/public/wp-json/',
+  endpointURL: 'https://tmorrow.design/wp-json/',
   dateFormat: 'MMM d, y'
 };
 /*
